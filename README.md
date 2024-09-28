@@ -227,6 +227,9 @@ With our fairly limited sample size (data was about 23,000 rows), it seems that 
     - [Quick intro to Aspect-Based Sentiment Analysis](https://medium.com/nlplanet/quick-intro-to-aspect-based-sentiment-analysis-c8888a09eda7)
 
   - Topic Modeling:
-    - [parth647 (github)](https://github.com/parth647/reddit_scraping_using_praw/blob/master/python_reddit_scrapy.py)
+    - [ddangelov (github)](https://github.com/ddangelov/Top2Vec/blob/master/README.md)
+    - [Top2Vec Documentation](https://top2vec.readthedocs.io/en/stable/Top2Vec.html)
+    - [A Beginner’s Guide to Latent Dirichlet Allocation(LDA)](https://towardsdatascience.com/latent-dirichlet-allocation-lda-9d1cd064ffa2)
+    - [Short Text Topic Modeling](https://towardsdatascience.com/short-text-topic-modeling-70e50a57c883)
 
     
