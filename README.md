@@ -31,7 +31,32 @@ This project aims to explore the common gaming debate between using a PC versus 
     - [Call of Duty Warzone is not fair ( PC vs Console )](https://www.youtube.com/watch?v=uMBEvgiKqBs)
  
   - Subreddits:
-    - 
+    -  we scraped from 30+ subreddits (general pc vs console debate, game specific: Halo, Call of Duty, Cyberpunk). All URLs are included in the [reddit_scraping.py](web_scraping_scripts/reddit_scraping.py) file.
+
+  -  Click [here](data/) for scraped data in csv format
+
+2) Apply aspect-based sentiment model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. see code [here](aspect_based_sent.py)
+  - we created 2 functions to implement this model: one where "console" was the aspect, one where "pc" was the aspect
+      - example:
+        ```python
+        # Load Aspect-Based Sentiment Analysis model
+        from transformers import AutoTokenizer, AutoModelForSequenceClassification
+        tokenizer = AutoTokenizer.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+        model = AutoModelForSequenceClassification.from_pretrained("yangheng/deberta-v3-base-absa-v1.1")
+
+        #create a funciton to assign prob of sentiment w regards to console
+        def get_probabilities_console(row):
+            text = str(row['text']).lower()
+            inputs = tokenizer(f"[CLS] {text} [SEP] {'console'} [SEP]", return_tensors="pt")
+            with torch.no_grad():
+                outputs = model(**inputs)
+            probs = F.softmax(outputs.logits, dim=1).detach().numpy()[0]
+            return pd.Series(probs, index=["console_negative", "console_neutral", "console_positive"])
+
+        # Apply the function to each row
+        probabilities_test_con = all_comments.apply(get_probabilities_console, axis=1)
+
+
 
 
   
