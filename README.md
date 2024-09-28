@@ -35,7 +35,7 @@ This project aims to explore the common gaming debate between using a PC versus 
 
   -  Click [here](data/) for scraped data in csv format
 
-**2) Apply aspect-based sentiment analysis model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. See code [here](aspect_based_sent.py)**
+**2) Apply aspect-based sentiment analysis model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. See code [here](Gaming_Webscraping_TopicModel/apsect_based_sent.py)**
   - We combined and wrangled data. We also found synonyms for "console," such as "ps5," or "playstation" and changed them to be "console"
   - We created 2 functions to implement this model: one where "console" was the aspect, one where "pc" was the aspect
       - example of "console" function:
