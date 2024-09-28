@@ -214,3 +214,19 @@ With our fairly limited sample size (data was about 23,000 rows), it seems that 
 
 <h2>Sources:</h2>
 
+  - Youtube Scraping:
+    - [analyticswithadam (github)](https://github.com/analyticswithadam/Python/blob/main/YouTube_Comments_Advanced.ipynb)
+ 
+  - Reddit Scraping:
+    - [parth647 (github)](https://github.com/parth647/reddit_scraping_using_praw/blob/master/python_reddit_scrapy.py)
+
+  - Aspect-Based Sentiment Analysis:
+    - [mounishvatti (github)](https://github.com/mounishvatti/SteamScrape)
+    - [Tokenization in Sentiment Analysis (medium)](https://medium.com/@felixmutai/tokenization-in-sentiment-analysis-cd386a08fab)
+    - [How to Monitor Sentiment in Gaming](https://www.affogata.com/blog/how-to-monitor-sentiment-in-gaming/)
+    - [Quick intro to Aspect-Based Sentiment Analysis](https://medium.com/nlplanet/quick-intro-to-aspect-based-sentiment-analysis-c8888a09eda7)
+
+  - Topic Modeling:
+    - [parth647 (github)](https://github.com/parth647/reddit_scraping_using_praw/blob/master/python_reddit_scrapy.py)
+
+    
