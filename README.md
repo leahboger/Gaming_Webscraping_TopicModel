@@ -184,7 +184,7 @@ This project aims to explore the common gaming debate between using a PC versus 
 <p align="left">
     - Pro PC Wordclouds
 <br />
-These suggest that people who like PCs (or don't like Consoles) focus on functionality ("mouse", "assist", ect.), customizability ("modding", "build", ect.), and being able to interact with other users ("crossplay", "multiplayer", ect.)
+These suggest that people who like PCs (or don't like Consoles) focus on functionality ("mouse", "assist", ect.), customizability ("modding", "build", ect.), cost, and being able to interact with other users ("crossplay", "multiplayer", ect.)
 <p align="center">
 <br />
 <img src="pc_topics/wordcloud_pctopic_0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
