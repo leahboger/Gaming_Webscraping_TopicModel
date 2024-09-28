@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This project aims to explore the common gaming debate between using a PC versus a Console. Using APIs, we scraped comments from popular subreddits and youtube videos on the subject. After cleaning and wrangling the data, we applied a common aspect-based sentiment model (deberta-v3-base-absa) to the comments. We then created a methodolgy to group comments into "pro console," "pro pc," and "neutral" comments. From there we used Top2Vec to model topics within each category. 
+This project aims to explore the common gaming debate between using a PC versus a Console. Using APIs, we scraped comments from popular subreddits and youtube videos on the subject. After cleaning and wrangling the data, we applied a common aspect-based sentiment analysis model (deberta-v3-base-absa) to the comments. We then created a methodolgy to group comments into "pro console," "pro pc," and "neutral" comments. From there we used Top2Vec to model topics within each category. 
 <br />
 
 <h2>Language and Packages Used</h2>
@@ -35,7 +35,7 @@ This project aims to explore the common gaming debate between using a PC versus 
 
   -  Click [here](data/) for scraped data in csv format
 
-**2) Apply aspect-based sentiment model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. See code [here](aspect_based_sent.py)**
+**2) Apply aspect-based sentiment analysis model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. See code [here](aspect_based_sent.py)**
   - We combined and wrangled data. We also found synonyms for "console," such as "ps5," or "playstation" and changed them to be "console"
   - We created 2 functions to implement this model: one where "console" was the aspect, one where "pc" was the aspect
       - example of "console" function:
@@ -57,7 +57,7 @@ This project aims to explore the common gaming debate between using a PC versus 
         # Apply the function to each row
         probabilities_test_con = all_comments.apply(get_probabilities_console, axis=1)
 
-**3) Group comments into 3 categories using ABSM scores: Pro PC, Pro Console, Neutral. See code [here](topic_modeling.py)**
+**3) Group comments into 3 categories using ABSA scores: Pro PC, Pro Console, Neutral. See code [here](topic_modeling.py)**
   - We created a function that sums probabilites as follows:
       - Pro PC (positive pc score + negative console score)
       - Pro Console (positive console score + negative pc socre)
