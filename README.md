@@ -1,4 +1,4 @@
-<h1>PC verus Console: Webscraping, Aspect-Based Sentiment Analysis, and Topic Modeling</h1>
+<h1>PC versus Console: Webscraping, Aspect-Based Sentiment Analysis, and Topic Modeling</h1>
 
 
 <h2>Description</h2>
