@@ -207,3 +207,10 @@ This suggest that people who like Consoles (or don't like PCs) focus on interact
 <br />
 <img src="console_topics/wordcloud_con_topic_0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
 Topic 1
+<p align="left">
+
+<h2>Conclusions:</h2>
+With our fairly limited sample size (data was about 23,000 rows), it seems that the debate is fairly even. When accounting for likes, pro-console opinions take a slight lead. Using topic modeling, we found the Pro-PC users value interaction with other users, functionality, and customizability. Pro-console users also value interaction, but also focus on legitamcy of each platform (using terms like "cheater"). These values and opinions could help determine how to market new gaming technology more effectively.
+
+<h2>Sources:</h2>
+
