@@ -178,7 +178,32 @@ This project aims to explore the common gaming debate between using a PC versus 
         wordcloud.to_file(f'/Users/leahboger/Documents/web_scraping/{file_name}')
 
         wordcloud.to_image()
+```
 
-
-- Visualizations
-    
+- Visualizations:
+<p align="left">
+    - Pro PC Wordclouds
+<br />
+These suggest that people who like PCs (or don't like Consoles) focus on functionality ("mouse", "assist", ect.), customizability ("modding", "build", ect.), and being able to interact with other users ("crossplay", "multiplayer", ect.)
+<p align="center">
+<br />
+<img src="pc_topics/wordcloud_pctopic_0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
+Topic 1
+<br />
+<br />
+<img src="pc_topics/wordcloud_pctopic_1.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
+Topic 2
+<br />
+<br />
+<img src="pc_topics/wordcloud_pctopic_2.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
+Topic 3
+<br />
+<br />
+<p align="left">
+    - Pro Console Wordclouds
+<br />
+This suggest that people who like Consoles (or don't like PCs) focus on functionality ("mouse", "assist", ect.), customizability ("modding", "build", ect.), and being able to interact with other users ("crossplay", "multiplayer", ect.)
+<p align="center">
+<br />
+<img src="pc_topics/wordcloud_pctopic_0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
+Topic 1
