@@ -202,8 +202,8 @@ Topic 3
 <p align="left">
     - Pro Console Wordclouds
 <br />
-This suggest that people who like Consoles (or don't like PCs) focus on functionality ("mouse", "assist", ect.), customizability ("modding", "build", ect.), and being able to interact with other users ("crossplay", "multiplayer", ect.)
+This suggest that people who like Consoles (or don't like PCs) focus on interaction with others("crossplay", "multiplayer", ect.). Interestingly a focus also seems to be on legitimacy of playing using words like "cheaters" or "hackers." This is a common critque of PC users (that it is cheating to use a PC to play people using a console)
 <p align="center">
 <br />
-<img src="pc_topics/wordcloud_pctopic_0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
+<img src="console_topics/wordcloud_con_topic_0.png" height="50%" width="50%" alt="Disk Sanitization Steps"/><br />
 Topic 1
