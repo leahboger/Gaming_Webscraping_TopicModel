@@ -35,9 +35,10 @@ This project aims to explore the common gaming debate between using a PC versus 
 
   -  Click [here](data/) for scraped data in csv format
 
-2) Apply aspect-based sentiment model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. see code [here](aspect_based_sent.py)
-  - we created 2 functions to implement this model: one where "console" was the aspect, one where "pc" was the aspect
-      - example:
+2) Apply aspect-based sentiment model [DeBERTa v3](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1) to comments. See code [here](aspect_based_sent.py)
+  - We combined and wrangled data. We also found synonyms for "console," such as "ps5," or "playstation" and changed them to be "console"
+  - We created 2 functions to implement this model: one where "console" was the aspect, one where "pc" was the aspect
+      - example of "console" function:
         ```python
         # Load Aspect-Based Sentiment Analysis model
         from transformers import AutoTokenizer, AutoModelForSequenceClassification
@@ -56,6 +57,42 @@ This project aims to explore the common gaming debate between using a PC versus 
         # Apply the function to each row
         probabilities_test_con = all_comments.apply(get_probabilities_console, axis=1)
 
+3) Group comments into 3 categories using ABSM scores: Pro PC, Pro Console, Neutral
+  - We created a function that sums probabilites as follows:
+      - Pro PC (positive pc score + negative console score)
+      - Pro Console (positive console score + negative pc socre)
+      - Neutral (neutral console score + neutral pc score)
+  - This function assigns the comment to the max summative score. There is theresholding in place to assign neutral less frequently
+  - function:
+      ```python
+      def group_probabilites(row):
+      pro_console_score = row['console_positive'] + row['pc_negative'] 
+      pro_pc_score = row['pc_positive'] + row['console_negative']
+      neutral_score = row['pc_neutral'] + row['console_neutral']
+    
+      sentiment_dict = {
+          'pro_console' : pro_console_score,
+          'pro_pc': pro_pc_score,
+          'neutral' : neutral_score
+          }
+
+      max_sent = max(sentiment_dict, key=sentiment_dict.get)
+
+      # If the max sentiment is neutral, check the differences
+      if max_sent == 'neutral':
+          difference_pro_pc = abs(neutral_score - pro_pc_score)
+          difference_pro_console =  abs(neutral_score - pro_console_score)
+        
+      # Check if the differences are less than 0.4
+      if difference_pro_pc < 0.4 or difference_pro_console < 0.4:
+            # Remove 'neutral' from the dictionary and return the next highest sentiment
+            sentiment_dict.pop('neutral')
+            return max(sentiment_dict, key=sentiment_dict.get)
+    
+    return max_sent
+
+    # apply function
+    all_comments_prob['comment_type'] = all_comments_prob.apply(group_probabilites, axis=1)
 
 
 
